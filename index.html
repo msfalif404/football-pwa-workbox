@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#E53935 ">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="shortcut icon" href="assets/images/favicon.jpg" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/images/icon-192x192.png">
+    <link rel="manifest" href="manifest.json">
+    <title>Football Information</title>
+</head>
+<body>
+    
+    <div class="navbar-fixed">
+        <nav class="red darken-1">
+            <div class="container">
+                <a href="index.html" class="brand-logo">Football Info</a>
+                <a href="#" class="sidenav-trigger" data-target="mobile-demo"><i class="material-icons">menu</i></a>
+                <ul class="navbar right hide-on-med-and-down">
+                    <!-- This data will be loaded from script.js and nav.html -->
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <ul class="sidenav" id="mobile-demo">
+        <!-- This data will be loaded from script.js and nav.html -->
+    </ul>
+
+    <div class="container" id="index-container">
+        <!-- This data will be loaded from script.js and pages folder -->
+    </div>
+    
+    <script src="js/materialize.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/idb.js"></script>
+    <script src="js/db.js"></script>
+    <script src="js/helper.js"></script>
+    <script>
+        // Registering all function from js/helper.js if service worker supported on this web
+        if("serviceWorker" in navigator){
+            registerServiceWorker();
+            requestPermission();
+        }
+    </script>
+</body>
+</html>
